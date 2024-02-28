@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selctors</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            background-color: cyan;
+        }
+
+        div {
+            color: white;
+        }
+        div>p{
+            color: black;
+        }
+        p:first-child{
+            color: blue;
+        }
+        p:last-child{
+            color: brown;
+        }
+        p:nth-child(2){
+            color: yellow;
+        }
+
+        span,
+        b {
+            color: red;
+        }
+
+        .class_div {
+            color: blue;
+        }
+
+        #id_div {
+            color: purple;
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+            transform: rotateX('90deg');
+        }
+
+        a:link {
+            color: red;
+        }
+
+        a:visited {
+            color: blue;
+        }
+
+        a:active {
+            background-color: yellow;
+        }
+
+        a:hover {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Selectors</h1>
+    <ul>
+        <li>Universal Selectors</li>
+        <li>Element Selectors</li>
+        <li>Group Selectors</li>
+        <li>Class Selectors</li>
+        <li>ID Selectors</li>
+    </ul>
+    <ol>
+        <li>
+            <div>This is a div having <b>universal styling</b> of background color cyan </div>
+        </li>
+        <li>
+            <div>This is a div having <b>Element styling</b> of color white the previous div also get the font color of
+                white</div>
+        </li>
+        <li><span>This is a span having <b>Group styling</b> of color red which also changes the color of b tag</span>
+        </li>
+        <li>
+            <div class="class_div">This is a div with class .class_div having <b>Class styling</b> of color blue</div>
+        </li>
+        <li>
+            <div id="id_div">This is a div with id #id_div having <b>ID styling</b> of color purple</div>
+        </li>
+    </ol>
+    <h1>PSeudo Selectors</h1>
+    <a href="https://www.code.com">Google</a>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere quas esse dolorum. Praesentium exercitationem quisquam magni aspernatur, porro consequuntur eius.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere quas esse dolorum. Praesentium exercitationem quisquam magni aspernatur, porro consequuntur eius.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere quas esse dolorum. Praesentium exercitationem quisquam magni aspernatur, porro consequuntur eius.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere quas esse dolorum. Praesentium exercitationem quisquam magni aspernatur, porro consequuntur eius.</p>
+    </div>
+</body>
+
+</html>

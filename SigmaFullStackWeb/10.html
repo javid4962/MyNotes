@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to CSS</title>
+</head>
+<link rel="stylesheet" href="10.css">
+<style>
+    q {
+        background-color: black;
+        color: white;
+        line-height: 30px;
+        display: block;
+        padding: 20px;
+        border-radius: 1rem;
+        text-wrap: nowrap;
+        overflow-x: scroll;
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+        margin: 0;
+        padding: 0;
+        line-height: 1px;
+        background-color: red;
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    p {
+        background-color: white;
+        color: blue;
+    }
+</style>
+
+<body>
+    <h1>Intro to CSS</h1>
+    <q>CSS stands for Cascading Style Sheets. It is a stylesheet language that is used to describe the visual
+        presentation of a web page written in HTML <abbr title="HTML">(Hyper Text Markup Language)</abbr>. HTML creates
+        the structure of the page, while CSS adds styling to that structure.</q>
+    <h2>Adding CSS to HTML</h2>
+    <span>There are <b>three</b> ways to add CSS to HTML</span>
+    <ul>
+        <li>Inline Styling - <i>This is used in an HTML page using style attribute.</i></li>
+        <li>Internal Styling - <i>It Means to add a style tag and place the HTML page's style within it.</i></li>
+        <li>External Styling - <i>It means to create a .css file and place all styles inside the .css file.</i></li>
+    </ul>
+    <h3>Example:</h3>
+    <p style="background-color: #f15b25; color: white;">This style is added through Inline Styling</p>
+    <p>This style is added through Internal Styling</p>
+    <p class="para">This style is added through External Styling</p>
+</body>
+
+</html>

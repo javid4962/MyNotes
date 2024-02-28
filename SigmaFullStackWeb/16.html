@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 13px;
+        }
+
+        .box {
+            border: 2px solid black;
+            width: 1248px;
+            height: 10vh;
+            background: aquamarine;
+        }
+        .main{
+            width: 100vw;
+            height: 80vh;
+            background: aqua;
+            border: 2px solid black;
+            overflow: hidden;
+        }
+        .box2{
+            margin: auto;
+            /* width: 50vw; */
+            font-size: 20px;
+        }
+        .box2>p{
+            font-size: 1.5em;
+            color: red;
+        }
+        .box2>.para2{
+            font-size: 2rem;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1>CSS Units</h1> -->
+    <div class="box">
+        This is a box
+    </div>
+    <div class="main">
+    <div class="box2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem facere maxime possimus non saepe consequuntur, itaque quaerat est, suscipit adipisci, dolor modi doloremque odit voluptatibus?</p>
+        <p class="para2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem facere maxime possimus non saepe consequuntur, itaque quaerat est, suscipit adipisci, dolor modi doloremque odit voluptatibus?</p>
+    </div>
+</div>
+    
+</body>
+
+</html>

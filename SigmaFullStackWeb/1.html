@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>This is a form header</h1>
+    <form action="post">
+        <label for="username">Enter your user name</label>
+        <input type="text" id="username" name="userName" placeholder="enter you name: " autofocus>
+        <div>
+            <input type="radio" name="gender" id="male">
+            <label for="male">male</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female">female</label>
+            <input type="checkbox" name="subscribe" id="subscribe">
+            <label for="subscribe">subscribe here </label>
+        </div>
+        <div>
+            <label for="comment">Enter your comment</label><br>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <select name="grossary" id="grossary">
+                <option value="apple">apple</option>
+                <option value="guva">guva</option>
+                <option value="pear">pear</option>
+                <option value="promogranent">promogranent</option>
+            </select>
+        </div>
+    </form>
+</body>
+</html>
