@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        .box {
+            margin: auto;
+            padding: 20px;
+            width: 22vw;
+            height: 22vh;
+            /* Now the content is overflowing */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* text-wrap: nowrap; */
+        }
+        .center{
+            border: 2px solid black;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            width: 30vw;
+            /* border: 2px solid; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus voluptatibus suscipit sed non quod soluta
+        beatae earum eaque obcaecati, molestiae similique tempore quasi enim sunt ad maxime facilis nisi voluptatum esse
+        dolores. Repudiandae pariatur tenetur, tempore id corrupti odio beatae non, aut fugiat sunt dolorum illum nihil
+        repellendus cumque exercitationem.
+    </div>
+    <button class="btn" id="toggle_btn">Show more</button>
+    </div>
+</body>
+<script>
+    var box = document.querySelector('.box');
+    
+    var toggle = document.querySelector('#toggle_btn');
+    toggle.addEventListener('click',()=>{
+        box.style.overflow='auto';
+        box.style.whiteSpace='wrap';
+    })
+
+</script>
+
+</html>
