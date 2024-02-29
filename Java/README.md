@@ -213,4 +213,338 @@ Now let us discuss JVM, which stands out for java virtual machine. It is as foll
 
 > Programming is an art of talking to acomputer.
 
+# Data Types
 
+<table border=1>
+  <tr>
+    <th>Real World Data</th>
+    <th>Java Data Types</th>
+  </tr>
+  <tr>
+    <td>Integer</td>
+    <td>byte, short, int, long</td>
+  </tr>
+  <tr>
+    <td>Real/Fractional</td>
+    <td>float, double</td>
+  </tr>
+  <tr>
+    <td>Character</td>
+    <td>char</td>
+  </tr>
+  <tr>
+    <td>Yes-No</td>
+    <td>boolean</td>
+  </tr>
+  <tr>
+    <td>Multimedia</td>
+    <td>Non Premitive Data Types</td>
+  </tr>
+</table>
+
+# Data Types - Sizes and Range
+
+<table>
+  <tr>
+    <th>Data Type</th>
+    <th>Size</th>
+    <th>Range</th>
+  </tr>
+  
+  <tr>
+    <td>byte</td>
+    <td>1 byte</td>
+    <td>-128 to 127</td>
+  </tr>
+  <tr>
+    <td>short</td>
+    <td>2 bytes</td>
+    <td>-32768 to 32767</td>
+  </tr>
+  <tr>
+    <td>int</td>
+    <td>4 bytes</td>
+    <td>-2147483648 to 2147483647</td>
+  </tr>
+  <tr>
+    <td>long</td>
+    <td>8 bytes</td>
+    <td>-9223372036854775808 to 9223372036854775807</td>
+  </tr>
+  </table>
+
+
+# Object-Oriented Programming
+- Object Oriented programming (OOP) is a approach of programming which is used to solve the real-world problems.
+- Objects are programming representation of real-world entities.
+- All the instructions which are required to create an object in java, must be kept inside a class.
+
+## Example 
+- To create an object we require the following information.
+- 1) State of Object or Property of Object
+- 2) Behaviour of Object or Actions of Objects.
+
+ for Example:-
+- For the Student Object 
+  - State of Student : name, roll_no, marks, skills.
+  - Behaviour of Student : studying, playing, sleeping, eating.
+- For the Car Object
+  - State of Car : brand, color, price.
+  - Behaviour of Car : accelerates.
+  - 
+![alt text](image-2.png)
+
+```java 
+class Car {
+    String brand;
+    String color;
+    int price;
+    
+    void accelerate(){
+        System.out.println(brand+" Car accelarates");
+    }
+}
+
+class CarApp{
+    public static void main(String[] args) {
+        Car c = new Car();
+        c.brand = "maruthi";
+        c.color = "cyan";
+        c.price = 120000;
+
+        System.out.println("Brand : "+c.brand);;
+        System.out.println("Color : "+c.color);
+        System.out.println("Price : "+c.price);
+        c.accelerate();
+    }
+}
+```
+```output 
+Brand : maruthi
+Color : cyan
+Price : 120000
+maruthi Car accelarates
+```
+![alt text](image-4.png)
+
+
+# Constructor
+
+## Program without Constructor
+```java
+class Teacher{
+  String name;
+  String sub;
+  int sal;
+
+  void teach(){
+    System.out.println("A teacher teaches");
+  }
+}
+class TeacherApp{
+  public static void main(String[] args){
+    Teacher t1 = new Teacher();
+    t1.name = "Deep";
+    t1.sub = "java";
+    t1.sal = 25000;
+
+    Teacher t2 = new Teacher();
+    t2.name = "kushal";
+    t2.sub = "Aptitude";
+    t2.sal = 30000;
+  }
+}
+```
+ ## Constructor in Java
+ - > Java provide us much more efficient way for giving the values for our instance variables which are present inside the object and that is called as constructor.
+ - > Name of the constructor is always same as the name of the class.
+ - > Whatever variable Teacher Constructor is accepting are known as local variable.
+ - > When is constructor going to get called - During the object creation.
+ - > What is the use of a constructor - We can use a constructor to give or set the values for our instance variable.
+  
+## Program with Constructor
+```java
+class Teacher{
+  String name;
+  String sub;
+  int sal;
+
+  void teach(){
+    System.out.println("A teacher teaches");
+  }
+  Teacher(String name, String sub, int sal){ // Local Variables
+    this.name = name; // Instance Variables
+    this.sub = sub;
+    this.sal = sal;
+  }
+}
+class TeacherApp{
+  public static void main(String[] args){
+    Teacher t1 = new Teacher("Deep","Java",25000);
+    Teacher t2 = new Teacher("Kushal","Aptitude",30000);
+  }
+}
+```
+![alt text](image-5.png)
+
+# Arrays
+- > We have understood that to store the information of data, we need to create variables.
+- > But, storing data in variables is not efficient when it comes to large volume of data.
+- > For example :
+  - > To store the marks of certain people we were using the following approach-
+    - int arun_marks = 65;
+    - int alia_marks = 75;
+    - int mahesh_marks = 85;
+    - int rahul_marks = 95;
+  - > In above scenario we have stored only 4 people marks, But you know in reality we have several names of students. So, storing in variables is not efficient approach.
+- > To store large volume of data efficiently we have to make use of `Arrays`.
+
+## 1-D Array Example Without Loop
+- As in java arrays are objects. To create an array we need to use new keyword, as shown below
+  
+```java
+class Result{
+  public static void main(String[] args){
+    int marks[] = new int[5];
+    marks[0] = 55;
+    marks[1] = 65;
+    marks[2] = 75;
+    marks[3] = 85;
+    marks[4] = 95;
+    System.out.println("Marks of Students : ");
+    System.out.println(marks[0]);
+    System.out.println(marks[1]);
+    System.out.println(marks[2]);
+    System.out.println(marks[3]);
+    System.out.println(marks[4]);
+  }
+}
+```
+```output
+Marks of students : 
+55
+65
+75
+85
+95
+```
+## 1-D Array Example With using Loop and taking input from the user
+```java
+import java.util.Scanner;
+class Result{
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter size of the array: ");
+    int n = sc.nextInt();
+    int marks[] = new int[n];
+    // Storing marks of the student
+    System.out.println("Enter marks of the Students: ");
+    for(int i = 0; i < marks.length; i++){
+      marks[i] = sc.nextInt();
+    }
+    // Printing marks of the student
+    System.out.println("Marks of students: ");
+    for(int i = 0; i < marks.length; i++){
+      System.out.println(marks[i]);
+    }
+  }
+}
+```
+## Eclipse Installation and First Program
+> IDE: Stands for "Integrated Development Environment".
+> Note: Eclipse is going to follow a hierarchy.
+
+## Steps to create First Java Program
+- goto "File" option in Menubar.
+- goto new -> look for "Java Project" (or)
+  - look for "other" option and select "Java Project", provide a valid "project-name".
+  - hit "finish".
+  - project has been created.
+- Expand the Project
+  - goto "src" folder
+  - right click on "src" folder
+  - goto "package"
+  - provide a valid name ofr package 
+  - hit "finish"
+- Right click on the package
+  - goto "new" option
+  - select "class" option
+  - provide a valid "class name"
+  - hit "finish".
+- Complete the program as shaown below
+  ```java
+    package practice;
+
+    public class Greet{
+      public static void main(String[] args){
+        System.out.println("Hello World!");
+      }
+    }
+  ```
+- In order to run the program,
+  - 1) click on "green button", select "Java Application", hit "ok" (or)
+  - 2) Right click anywhere in your program click on Run As
+  - select "Java Application" and click it.
+
+## 2-D Arrays
+```java
+  String name[][] = new String[2][3];
+  name[0][0] = "Raj";
+  name[0][1] = "Aalia";
+  name[0][2] = "Raju";
+  name[1][0] = "Anu";
+  name[1][1] = "Sonu";
+  name[1][2] = "Varun";
+```
+![alt text](image-6.png)
+> name.length = 2
+> name[0].length = 3
+> name[1].length = 3
+
+## 2-D Array Example
+> Note: If you are taking String input after taking number input you must us an extra nextLine().
+```java
+  import java.util.Scanner;
+
+  public class NamesApp{
+    public static void main(String[] args){
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Please enter number of classes");
+      int row = sc.nextInt();
+      System.out.println("Please enter number of students in each class");
+      int col = sc.nextInt();
+      sc.nextLine();
+      String names[][] = new String[row][col];
+      // Storing names in array
+      System.out.println("Please enter names : ");
+      for(int i = 0; i < names.length; i++){
+        for(int j = 0; j < names[i].length; j++){
+          names[i][j] = sc.nextLine();
+        }
+      }
+      // Printing names in the array
+      System.out.println("Names of Students : ");
+      for(int i = 0; i < names.length; i++){
+        for(int j = 0; j < names[i].length; j++){
+          System.out.println(names[i][j]+" ");
+        }
+        System.out.println();
+      }
+    }
+  }
+```
+```output
+Please enter number of classes
+2
+Please enter number of students in each class
+3
+Please enter names : 
+ravi
+sanju
+ramya
+allu
+mahesh
+tarun
+Names of Student : 
+ravi  sanju   ramya
+allu  mahesh  tarun
