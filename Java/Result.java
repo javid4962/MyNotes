@@ -1,19 +1,22 @@
 import java.util.Scanner;
 class Result{
     public static void main(String[] args){
-      Scanner sc = new Scanner(System.in);
-      System.out.print("Enter size of the array: ");
-      int n = sc.nextInt();
-      int marks[] = new int[n];
-      // Storing marks of the student
-      System.out.println("Enter marks of the Students: ");
-      for(int i = 0; i < marks.length; i++){
-        marks[i] = sc.nextInt();
-      }
-      // Printing marks of the student
-      System.out.println("Marks of students: ");
-      for(int i = 0; i < marks.length; i++){
-        System.out.println(marks[i]);
-      }
+      // Scanner sc = new Scanner(System.in);
+      // System.out.print("Enter size of the array: ");
+      // int n = sc.nextInt();
+      // int marks[] = new int[n];
+      // // Storing marks of the student
+      // System.out.println("Enter marks of the Students: ");
+      // for(int i = 0; i < marks.length; i++){
+      //   marks[i] = sc.nextInt();
+      // }
+      // // Printing marks of the student
+      // System.out.println("Marks of students: ");
+      // for(int i = 0; i < marks.length; i++){
+      //   System.out.println(marks[i]);
+      // }
+
+     int[] arr = {1,2,3,4,5};
+     System.out.println(arr.length+1);
     }
   }

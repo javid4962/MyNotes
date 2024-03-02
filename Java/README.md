@@ -548,3 +548,127 @@ tarun
 Names of Student : 
 ravi  sanju   ramya
 allu  mahesh  tarun
+```
+## Drawbacks of Array
+1) Arrays can store onl homogeneous data that means data of same type.
+2) It's size is static that means it's size remains fixed throughout the entire execution of the program
+   - Example:
+    int a[] = new int[5];
+
+      <table border=1>
+        <tr>
+          <td rowspan=2>a --> </td>
+          <td>0</td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>20</td>
+          <td>30</td>
+          <td>40</td>
+          <td>50</td>
+        </tr>
+      </table>
+3) It expects contiguous memory allocations it cannot utilize the scattered memory available on the RAM.
+
+## More About Array
+int arr[] = new int[5];
+
+int[] arr = new int[5];
+
+The above two statements will be same to create an array of size 5.
+
+#### Creating an array by defining elements of the array:
+
+int arr[] = {10, 20, 30};
+<table border=1>
+  <tr>
+    <td rowspan=2>arr --></td>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>20</td>
+    <td>30</td>
+  </tr>
+</table>
+
+# Strings
+> Strings can be defined as Array of characters or group of characters enclosed with in ""(double quotes).
+
+- For example:
+  - "Deep"
+  - "Deep123"
+## Different ways to create Strings
+```java
+class StringDemo{
+  public static void main(String[] args){
+    String s1 = new String("Java");
+    System.out.println("s1:" + s1);
+    char ch[] = {'p','y','t','h','o','n'};
+    String s2 = new String(ch);
+    System.out.println("s2" + s2);
+    String s3 = "HTML";
+    System.out.println("s3:" + s3);
+  }
+}
+```
+```output
+s1:Java
+s2:python
+s3:HTML
+```
+![alt text](image-7.png)
+
+## Specification of String Pool
+Major difference between String Pool area and outside of String Pool area
+<table border=1>
+  <tr>
+    <th>String Pool area</th>
+    <th>Outside String Pool area</th>
+  </tr>
+  <tr>
+    <td>i. Duplicate values are not allowed.</td>
+    <td>i. Duplicate values are allowed.</td>
+  </tr>
+  <tr>
+    <td>ii. String literals created without using `new` keyword are stored in String Pool.</td>
+    <td>ii. String literals created using `new` keyword are stored outside String Pool.</td>
+  </tr>
+  <tr>
+    <td>iii. Before storing any string value inside String Pool whether that value already present or not will be checked.</td>
+    <td>iii. If the string literal already present outside String Pool then also same string literal is allowed.</td>
+  </tr>
+</table>
+
+> Note: If the String literal already present in String Pool then the copy of the address will be returned.
+
+Example:
+```java
+class StringDemo{
+  public static void main(String[] args){
+    String s1 = new String("Java");
+    // a string object using 'new' keyword
+    String s2 = new String("Java");
+    String s3 = "Python";// creating a string object without using new keyword
+    String s4 = "Python";
+    // For comparing 2 string address(reference)
+    // "==" operator is used and it returns boolean result
+    System.out.println(s1==s2);
+    // address of s1=s2
+    System.out.println(s3==s4);
+    // address of s3=s4
+  }
+}
+```
+```output
+false
+true
+```
+### Memory Mapping:
+![alt text](image-8.png)
