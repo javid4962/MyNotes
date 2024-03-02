@@ -672,3 +672,340 @@ true
 ```
 ### Memory Mapping:
 ![alt text](image-8.png)
+
+## Inbuilt methods present in String
+consider:
+
+```java
+String str = "Kodnest Tech Pvt Ltd";
+String s1 = str.toUpperCase();
+String s2 = str.toLowerCase();
+String s3 = str.substring(8,12);
+String s4 = str.substring(8);
+```
+<table border=1>
+  <tr>
+    <td rowspan=2>Str -> </td>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+    <td>10</td>
+    <td>11</td>
+    <td>12</td>
+    <td>13</td>
+    <td>14</td>
+    <td>15</td>
+    <td>16</td>
+    <td>17</td>
+    <td>18</td>
+    <td>19</td>
+  </tr>
+  <tr>
+    <td>K</td>
+    <td>o</td>
+    <td>d</td>
+    <td>n</td>
+    <td>e</td>
+    <td>s</td>
+    <td>t</td>
+    <td> </td>
+    <td>T</td>
+    <td>e</td>
+    <td>c</td>
+    <td>h</td>
+    <td> </td>
+    <td>P</td>
+    <td>v</td>
+    <td>t</td>
+    <td> </td>
+    <td>L</td>
+    <td>t</td>
+    <td>d</td>
+  </tr>
+</table>
+
+> `.toUpperCase()`: Converts all the letters in the String to Lowercase letters.
+>
+> `s1 -> KODNEST TECH PVT LTD`
+
+> `.toLowerCase()`: Converts all the letters in the string to uppercase letters.
+>
+> `s2 -> kodnest tech pvt ltd`
+
+> `.substring(Starting index, Ending index)`: returns substring from the given string from starting index to ending index that is given as parameters (input) excluding ending index.
+>
+> `s3 -> Tech`
+
+> `.substring(Starting index)`: returns the substring from the given string from the entered starting string index to the end of the string.
+>
+> `s4 -> Tech Pvt Ltd`
+
+
+### Program:
+```java
+public class StringMethodsDemo{
+  public static void main(String[] args){
+    String str = "Kodnest Tech Pvt Ltd";
+    String s1 = str.toUpperCase();
+    String s2 = str.toLowerCase();
+    String s3 = str.substring(8,12);
+    String s4 = str.substring(8);
+    
+    System.out.println("Original String = "+str);
+    System.out.println("s1 = "+s1);
+    System.out.println("s2 = "+s2);
+    System.out.println("s3 = "+s3);
+    System.out.println("s4 = "+s4);
+  }
+}
+```
+```output
+Original String = Kodnest Tech Pvt Ltd
+s1 = KODNEST TECH PVT LTD
+s2 = kodnest tech pvt ltd
+s3 = Tech
+s4 = Tech Pvt Ltd
+```
+consider:
+
+```java
+String str = "Kodnest Tech";
+int l = str.length();
+boolean pr = str.contains("T");
+char ch[] = str.toCharArray();
+String s[] = str.split(" ");
+String str2 = str.concat(" Software");
+```
+<table border=1>
+  <tr>
+    <td rowspan=2>Str -> </td>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+    <td>10</td>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td>K</td>
+    <td>o</td>
+    <td>d</td>
+    <td>n</td>
+    <td>e</td>
+    <td>s</td>
+    <td>t</td>
+    <td> </td>
+    <td>T</td>
+    <td>e</td>
+    <td>c</td>
+    <td>h</td>
+  </tr>
+</table>
+
+
+> `.length()`: returns number of characters present in the string in integer type(number).
+> 
+> `returns "12" for string "Kodnest Tech"`
+
+> `.contains("input")`: returns true if given character or set of characters present in the string or returns false if it is not present.
+>
+> `returns "true" for string "Kodnest Tech"`
+
+> `.toCharArray()`: Converts the given string into a character array.
+>
+ <table border=1>
+  <tr>
+    <td rowspan=2>ch -> </td>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+    <td>10</td>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td>K</td>
+    <td>o</td>
+    <td>d</td>
+    <td>n</td>
+    <td>e</td>
+    <td>s</td>
+    <td>t</td>
+    <td> </td>
+    <td>T</td>
+    <td>e</td>
+    <td>c</td>
+    <td>h</td>
+  </tr>
+</table>
+
+
+
+> `.split("delimiter/input")`: Converts the given string into a string array by splitting the string according to the input/delimiter.
+>
+<table border=1>
+  <tr>
+    <td rowspan=2>s -> </td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Kodnest</td>
+    <td>Tech</td>
+  </tr>
+  </table>
+
+> `.concat("input String")`: joins the input string with given string
+>
+> `str2 -> Kodnest Tech Software`
+
+### Program:
+```java
+public class StringMethodsDemo{
+  public static void main(String[] args){
+    String str = "Kodnest Tech";
+    int l = str.length();
+    boolean pr = str.contains("T");
+    char ch[] = str.toCharArray();
+    String s[] = str.split(" ");
+    String str2 = str.concat(" Software");
+    System.out.println("Original String: "+str);
+    System.out.println("length of String: "+l);
+    System.out.println("is given character present: "+pr);
+    System.out.println("printing elements of array ch: ");
+
+    for(int i=0; i<=ch.length-1; i++){
+      System.out.println(ch[i]);
+    }
+    System.out.println("printing elements of array s: ");
+    for(int i=0; i<s.length; i++){
+      System.out.println(s[i]);
+    }
+    System.out.println("Concatenated String: "+str2);
+  }
+}
+```
+```output
+Original String: Kodnest Tech
+length of String: 12
+is given character present: true
+printing elements of array ch: 
+K
+o
+d
+n
+e
+s
+t
+
+T
+e
+c
+h
+printing elements of array s:
+Kodnest 
+Tech
+Concatenated String: Kodnest Tech Softwares
+```
+
+consider:
+```java
+String str = "Kodnest Tech";
+String s1 = str + " Pvt Ltd";
+char ch = str.charAt(5);
+```
+ <table border=1>
+  <tr>
+    <td rowspan=2>str --> </td>
+    <td>K</td>
+    <td>o</td>
+    <td>d</td>
+    <td>n</td>
+    <td>e</td>
+    <td>s</td>
+    <td>t</td>
+    <td> </td>
+    <td>T</td>
+    <td>e</td>
+    <td>c</td>
+    <td>h</td>
+  </tr>
+</table>
+
+> [!NOTE]
+> `+`: + operator usage is allowed in java to concatinate two strings.
+>
+> `s1 -> Kodnest Tech Pvt Ltd`
+
+> `.charAt(index)`: returns the character that is present at the index given to charAt() as input
+>
+> `ch -> s`
+
+### Program:
+```java
+public class StringMethodsDemo{
+  public static void main(String[] args){
+    String str = "Kodnest Tech";
+    String s1 = str + " Pvt Ltd";
+    char ch = str.charAt(5);
+    System.out.println(s1);
+    System.out.println(ch);
+  }
+}
+```
+```output
+Kodnest Tech Pvt Ltd
+s
+```
+
+## Mutable & Immutable Strings
+In String there are two types
+1. Mutable Strings
+2. Immutable Strings
+
+> `Mutable Strings`: Strings that can be changed once after the creationis called Mutable Strings. 
+> 
+> ex: `Password`.
+
+> `Immutable Strings`: Strings that cannot be changed once created are called as Immutable Strings.
+>
+> ex: `Name, Date of Birth`.
+
+### Program:
+```java
+class StringDemo{
+  public static void main(String[] args){
+    String s = new String("Java");
+    s.concat("Python");
+    System.out.println(s);
+  }
+}
+```
+```output
+Java
+```
+### Memory Mapping:
+![alt text](image-9.png)
+
+> `Anonymous Object`: objects which doesnot have any variable refering to it are called as Anonymous Objects(Garbage Object).
+>
+> When there is an object in the `  HEAP` segment to whome no reference variable is refering to such object are deleted or collected by `Garbage Collector Thread`.
