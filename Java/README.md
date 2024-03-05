@@ -1009,3 +1009,134 @@ Java
 > `Anonymous Object`: objects which doesnot have any variable refering to it are called as Anonymous Objects(Garbage Object).
 >
 > When there is an object in the `  HEAP` segment to whome no reference variable is refering to such object are deleted or collected by `Garbage Collector Thread`.
+
+# Methods
+> `Methods`: A method can be defined as a set of statements required to perform a specific task
+
+## Types of Methods
+### Type 1:
+> `Which does not return any value and also not going to accet any argument`
+>
+> Ex 1: `No-return type, without arguments`
+>
+> Syntax: 
+> ```java
+> void method_name(){
+>  // statements
+> }
+> ```
+> Note: `void` keyword is used when the method is not returning any value. 
+
+### Program:
+```java
+class SquareDemo{
+  void findSquare(){
+    int num = 20;
+    int sq = num * num;
+    System.out.println("Square = "+sq);
+  }
+}
+class SquareApp{
+  public static void main(String[] args){
+    SquareDemo sd = new SquareDemo();
+    sd.findSquare();
+  }
+}
+```
+```output
+Square = 400
+```
+### Type 2:
+> `Which does not return any value but it will accept some value from the caller.`
+>
+> Ex 2: `No-return type, With arguments`
+>
+> Syntax: 
+> ```java
+> void method_name(arguments){
+>  // statements
+> }
+> ```
+
+### Program:
+```java
+class SquareDemo{
+  void findSquare(int num){
+    int sq = num * num;
+    System.out.println("Square = "+sq);
+  }
+}
+class SquareApp{
+  public static void main(String[] args){
+    SquareDemo sd = new SquareDemo();
+    sd.findSquare(20);
+  }
+}
+```
+```output
+Square = 400
+```
+### Type 3:
+> `Method which is going to return some value back to the caller and also accept some value from the caller.`
+>
+> Ex 3: `Return-type, With argument`
+>
+> Syntax:
+> ```java
+> return-type method_name(arguments)> {
+>   // statements
+> }
+> ```
+
+### Program:
+```java
+class SquareDemo{
+  int findSquare(int num){
+    int sq = num * num;
+    return sq;
+  }
+}
+class SquareApp{
+  public static void main(String[] args){
+    SquareDemo sd = new SquareDemo();
+    int res = sd.findSqaure(20);
+    System.out.println("Square = "+res);
+  }
+}
+```
+```output
+Square = 400
+```
+
+### Type 4:
+> `Method which is going to return some value to the caller without taking any value from the caller.`
+>
+> Ex 4: `Return-type, Without arguments`
+>
+> Syntax:
+> ```java
+> return-type method_name(){
+>   // statements  
+> }
+> ```
+
+### Program:
+```java
+class SquareDemo{
+  int findSquare(){
+    int num = 20;
+    int sq = num * num;
+    return sq;
+  }
+}
+class SquareApp{
+  public static void main(String[] args){
+    SquareDemo sd = new SquareDemo();
+    int res = sd.findSquare();
+    System.out.println("Square = "+res);
+  }
+}
+```
+```output
+Square = 400
+```
