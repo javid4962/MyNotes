@@ -1140,3 +1140,36 @@ class SquareApp{
 ```output
 Square = 400
 ```
+### Memory Management of Methods
+```java
+class Calci{
+  void add(int a, int b){
+    int s = a + b;
+    System.out.println("Sum = "+s);
+  }
+  void sub(){
+    int x = 10;
+    int y = 5;
+    int d = x - y;
+    System.out.println("Diff = "+d);
+  }
+}
+class CalciApp{
+  public static void main(String[] args){
+    Calci c = new Calci();
+    c.add(20,30);
+    c.sub();
+  }
+}
+```
+```output
+Sum = 50
+Diff = 5
+```
+![alt text](image-10.png)
+![alt text](image-11.png)
+
+
+> [!NOTE]
+> 1. In Java, as soon as a method is called, `Activation Record` of that perticular method will be created in the `Stack Segment`.
+> 2. As soon as the control leaves/exits the method, the activation record of that perticular method will be deleted in the `Stack Segment`.
