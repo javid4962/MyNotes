@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multicolor Nav bar</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    :root{
+        --text-clr : #ffffff;
+        --primary-clr : #7d2b94;
+        --secondary-clr : #cfa1e68a;
+        --link-bdr-clr : #4ff00fea;
+        --link-bdr-hr-clr : #160ff0ea;
+    }
+    html{
+        width: 100vw;
+        height: 100vh;
+        background: var(--secondary-clr);
+    }
+    header{
+        width: 100vw;
+        background-color: var(--primary-clr);
+        color: var(--text-clr);
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    nav > h1{
+        font-size: 2rem;
+        margin: auto 1rem;
+    }
+    nav > ul{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        /* width: 20rem; */
+        /* float: left; */
+    }
+    nav > ul li{
+        list-style: none;
+        border-radius: 0.3rem;
+    }
+    ul li a{
+        margin: 1rem;
+        padding: 0.5rem;
+        text-decoration: none;
+        border: 3px solid var(--link-bdr-clr);
+        background-color: transparent;
+        color: var(--text-clr);
+        transition-delay: 0.1s;
+        transition-behavior: ease-in-out;
+        
+    }
+    ul li a:hover{
+        border: 3px solid var(--link-bdr-hr-clr);
+    }
+  @media only screen and (max-width:750px){
+    html{
+        background-color: red;
+    }
+  }
+
+</style>
+
+<body>
+    <header>
+        <nav>
+            <h1>Multicolor Navbar</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

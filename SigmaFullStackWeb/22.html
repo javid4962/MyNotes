@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        body{
+            background-color: red;
+        }
+        .boxes{
+            display: flex;
+        }
+        .box{
+            /* width: 344px; */
+            height: 344px;
+            background: white;
+            padding: 2px;
+            margin: 3px;
+        }
+        
+        @media only screen and (max-width:445px){
+            body{
+                background-color: yellow;
+            }
+            .boxes{
+                flex-direction: column;
+            }
+        }
+        @media only screen and (orientation: landscape){
+            body{
+                background: pink;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Iam some content
+    </div>
+    <div class="boxes">
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sapiente adipisci, laboriosam doloribus tempore maxime obcaecati quibusdam fuga repellat voluptates ea officiis numquam, voluptatum est eum in minima? Esse, harum!</div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloribus explicabo eveniet quae molestias tempore accusamus eius, assumenda iure aperiam est porro numquam dolorum rem possimus illo quas quam labore?</div>
+        <div class="box">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eaque illum sapiente corrupti quaerat! Corrupti nisi odio praesentium neque quibusdam beatae incidunt quisquam officiis dolore perspiciatis! Est rerum in magnam?</div>
+    </div>
+</body>
+</html>

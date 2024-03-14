@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise - 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            font-family: "Baloo Bhaijaan 2", sans-serif;
+        }
+
+        :root {
+            --bora: 2%;
+        }
+
+        body {
+            background: #000;
+            color: white;
+            margin: 2rem;
+        }
+        .profile_card{
+            font-family: "Baloo Bhaijaan 2", sans-serif;
+        }
+
+        .profile {
+            width: 30%;
+            /* height: 100%; */
+            background: #5c5c5c7f;
+            margin: auto;
+            padding: 2rem;
+            border-radius: var(--bora);
+            font-family: "Baloo Bhaijaan 2", sans-serif;
+        }
+
+        .profile_img img {
+            width: 100%;
+            margin: auto;
+            /* scale: 0.9; */
+            border-radius: var(--bora);
+            /* border: 2px solid red; */
+        }
+
+        .profile_links {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 0.1rem 0.4rem;
+            padding: 0.3rem 0.6rem;
+            /* border: 1px solid red; */
+            /* gap: 10%; */
+        }
+
+        .profile_link {
+            padding: 0.4rem 0.6rem;
+            border: 1px solid white;
+            border-radius: 10rem;
+            font-size: 0.8rem;
+        }
+
+        .profile_link:hover {
+            padding: 0.6rem;
+            border: 1px solid black;
+            color: black;
+            background: #fff;
+            transition-delay: 0.2ms;
+            transition-behavior: ease-in;
+            border-radius: 10rem;
+            font-size: 0.8rem;
+        }
+
+        .profile_content {
+            margin: 0.5rem;
+        }
+
+        .profile_name {
+            font-size: 2rem;
+            margin: 1rem 0rem;
+        }
+
+        .profile_description {
+            font-size: 0.9rem;
+            color: rgba(183, 183, 183, 0.515);
+            font-family: "Poppins", sans-serif;
+        }
+
+        .readmore {
+            display: block;
+            text-align: center;
+            margin: auto;
+            padding: 0.6rem 0.8rem;
+            border: 1px solid white;
+            background: transparent;
+            color: blue;
+            border-radius: 1rem;
+            font-size: 0.7rem;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="profile_card">Profile Card</h1>
+    <div class="profile">
+        <div class="profile_img">
+            <img src="profile_img.jpg" alt="profile image">
+        </div>
+        <div class="profile_links">
+            <a href="#" class="profile_link">LinkedIn</a>
+            <a href="#" class="profile_link">Github</a>
+            <a href="#" class="profile_link">Leetcode</a>
+        </div>
+        <div class="profile_content">
+            <div class="profile_heading">
+                <h3 class="profile_name">CodeWithHarry</h3>
+                <p class="profile_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quidem
+                    nobis odio ipsam debitis inventore incidunt tenetur iusto. Officiis quaerat fugiat odio voluptas
+                    facere, deserunt similique suscipit dolores, vitae necessitatibus laboriosam omnis obcaecati. Vero,
+                    omnis! Voluptates explicabo harum ad facere, consequuntur repellat debitis dolore, vitae doloribus
+                    minima quisquam molestias ducimus.</p>
+            </div>
+        </div>
+        <button class="readmore">Read more</button>
+    </div>
+</body>
+
+</html>

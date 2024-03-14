@@ -1172,4 +1172,58 @@ Diff = 5
 
 > [!NOTE]
 > 1. In Java, as soon as a method is called, `Activation Record` of that perticular method will be created in the `Stack Segment`.
-> 2. As soon as the control leaves/exits the method, the activation record of that perticular method will be deleted in the `Stack Segment`.
+> 2. As soon as the control leaves/exits the method, the activation record of that perticular method will be deleted in the `Stack Segment`.\
+
+## Method Overloading
+`Method Overloading can be used` in such case `where multiple methods having different names performing same task using different parameters`.
+
+Method Overloading refers to the `process of having methods in a class with a same name, but having different parameter & different order of data type of parameter.`
+
+> [!NOTE]
+> Compiler will always check for 3 things during method call in method overloading. They are
+> 1. Number of Arguments.
+> 2. Data Type of Arguments.
+> 3. Order of Data Types.
+
+### Program
+```java
+class Sum{
+  void add(int a, int b){
+    System.out.println("Sum = "+(a+b));
+  }
+  void add(double a, double b){
+    System.out.println("Sum = "+(a+b));
+  }
+  void add(int a, double b){
+    System.out.println("Sum = "+(a+b));
+  }
+  void add(double a, int b){
+    System.out.println("Sum = "+(a+b));
+  }
+  void add(int a, int b, int c){
+    System.out.println("Sum = "+(a+b+c));
+  }
+  void add(double a, double b,double c){
+    System.out.println("Sum = "+(a+b+c));
+  }
+  void add(int a, double b, float c){
+    System.out.println("Sum = "+(a+b+c));
+  }
+  void add(double a, float b, int c){
+    System.out.println("Sum = "+(a+b+c));
+  }
+}
+class SumApp{
+  public static void main(String[] args){
+    Sum s = new Sum();
+    s.add(10,20);
+    s.add(10.0,20.0,30.0);
+    s.add(10.5,5);
+  }
+}
+```
+```output
+Sum = 30
+Sum = 60.0
+Sum = 15.5
+```

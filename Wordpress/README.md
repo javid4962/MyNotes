@@ -126,6 +126,11 @@ Make changes in the webpage and publish the final webpage.
 <!-- <a href="#day2">Day2</a> -->
 
 <span id="day1"></span>
+
+## What is WebDevelopment
+
+Webdevlopment refers to the process of building, creating, and maintaining websites and web applications. It involves various tasks such as web design, web content development, client-side/server-side scripting, configuration of web servers, network security configuration, and e-commerce development.
+
 ## What is Website?
 
 
