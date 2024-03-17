@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+</head>
+<style>
+    /* .box:first-child{
+        background-color: red;
+    } */
+    /* .box:first-line{
+        color: cyan;
+    } */
+    /* .boxes *{
+        color: blue;
+        border: 2px solid black;
+    }
+    [data-color="primary"]{
+        margin: 2rem;
+    }
+    div, a{
+        color: red;
+    } */
+    /* a{
+        color: red;
+    }
+    .box:nth-child(odd) {
+        background-color: red;
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .box:nth-child(3n-1) {
+        background-color: blue;
+        margin: 1rem;
+        padding: 1rem;
+    }
+    .box:nth-child(3n+1) {
+        background-color: yellow;
+        margin: 1rem;
+        padding: 1rem;
+    } */
+    /* psuedo elements */
+    .boxes::before{
+        content: "this is a before content";
+        color: red;
+    }
+    .boxes::after{
+        content: "this is a after content";
+        color: blue;
+    }
+    ::selection{
+        color: aqua;
+        background: #000;
+    }
+    .box::first-letter{
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: peru;
+    }
+</style>
+
+<body>
+    <div class="boxes">
+        <div class="box">hello i am a box</div>
+        <div class="box">hello i am a box</div>
+        <div class="box">hello i am a box</div>
+    </div>
+</body>
+
+</html>

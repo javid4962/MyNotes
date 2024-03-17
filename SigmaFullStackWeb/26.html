@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise-5</title>
+    <style>
+       :root{
+        --nav-clr: rgba(7, 251, 55, 0.7);
+        --main-clr: #fdf5b789;
+        --main1-clr: rgb(255, 0, 89);
+        --main2-clr: rgb(51, 0, 255);
+        --content-clr: #00f;
+        --footer-clr: #828282;
+        --bg-clr: #d1b4fc58;
+        --icon-clr: rgb(255, 10, 10);
+        --text-clr: #ffffff;
+       }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: var(--bg-clr);
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            padding: 2rem;
+            background-color: var(--nav-clr);
+            color: var(--text-clr);
+        }
+
+        .icon {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 2rem;
+            height: 2rem;
+            background-color: var(--icon-clr);
+            border-radius: 50%;
+        }
+
+        .main {
+            /* width: 100%; */
+            /* height: 40%; */
+            height: 30rem;
+            background-color: var(--main-clr);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 1rem;
+
+        }
+
+        .main1 {
+            width: 40%;
+            height: 50%;
+            /* margin: auto 1rem; */
+            background-color: var(--main1-clr);
+        }
+
+        .main2 {
+            width: 40%;
+            height: 50%;
+            /*margin: auto 1rem; */
+            background-color: var(--main2-clr);
+        }
+
+        .content {
+            height: 10rem;
+            margin: 3rem 2rem;
+            border-radius: 35px;
+            background-color: var(--content-clr);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-clr);
+            font-size: 1.3rem;
+        }
+
+        .footer {
+            /* height: 20%; */
+            background-color: var(--footer-clr);
+            color: var(--text-clr);
+            padding: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar"></div>
+        <div class="main">
+            <div class="main1"></div>
+            <div class="main2"></div>
+        </div>
+        <div class="content">Welcome to Sigma Webdevelopment course</div>
+        <div class="footer"></div>
+        <div class="icon"></div>
+    </div>
+</body>
+
+</html>

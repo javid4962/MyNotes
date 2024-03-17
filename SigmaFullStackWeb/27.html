@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+        padding: 1rem;
+        background-color: black;
+        color: white;
+    }
+
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+        display: flex;
+        border: 1px solid rgb(255, 255, 255);
+        height: 40vh;
+        gap: 4px;
+    }
+
+    .container .item {
+        width: 2rem;
+        height: 2rem;
+        /* margin: 0.2rem; */
+        background-color: blue;
+        border: 2px solid rgb(255, 255, 255);
+        padding: 0.2rem;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .item:nth-child(2n){
+        align-self: center;
+    }
+    .item:nth-child(2n+1){
+        align-self: end;
+    }
+    .item:nth-child(3n){
+        align-self: end;
+    }
+
+    .btn {
+        padding: 0.4rem;
+        border-radius: 0.4rem;
+        color: white;
+        background-color: red;
+        margin: 0rem 0rem 1rem 0rem;
+    }
+
+    .btn:active {
+        background-color: rgba(212, 0, 255, 0.821);
+    }
+    .properties{
+        border: 2px solid white;
+        background-color: black;
+        color: white;
+        padding: 2rem;
+        border-radius: 2rem;
+    }
+    
+
+</style>
+
+<body>
+    <span>Flex Box</span>
+    <div class="container">
+        <div class="item" id="item1">1</div>
+        <div class="item" id="item2">2</div>
+        <div class="item" id="item3">3</div>
+        <div class="item" id="item4">4</div>
+        <div class="item" id="item5">5</div>
+        <div class="item" id="item6">6</div>
+        <div class="item" id="item7">7</div>
+        <div class="item" id="item8">8</div>
+        <div class="item" id="item9">9</div>
+        <div class="item" id="item10">10</div>
+        <div class="item" id="item11">11</div>
+        <div class="item" id="item12">12</div>
+        <div class="item" id="item13">13</div>
+    </div>
+    <div class="properties">
+        <p>Dispaly:</p>
+        <button class="btn" id="flex">Flex</button>
+        <button class="btn" id="block">Block</button>
+        <button class="btn" id="inline-flex">Inline-flex</button>
+
+        <p>Direction:</p>
+        <button class="btn" id="flex-col">Column</button>
+        <button class="btn" id="flex-col-rev">Column-Reverse</button>
+        <button class="btn" id="flex-row">Row</button>
+        <button class="btn" id="flex-row-rev">Row-Reverse</button>
+
+        <p>Align Items: </p>
+        <button class="btn" id="ai-start">Start</button>
+        <button class="btn" id="ai-center">Center</button>
+        <button class="btn" id="ai-end">End</button>
+
+        <p>Justify Content: </p>
+        <button class="btn" id="jc-start">Start</button>
+        <button class="btn" id="jc-center">Center</button>
+        <button class="btn" id="jc-end">End</button>
+        <button class="btn" id="jc-sb">spaceBetween</button>
+        <button class="btn" id="jc-se">spaceEvenly</button>
+        <button class="btn" id="jc-sa">spaceAround</button>
+
+        <p>Flex Wrap: </p>
+        <button class="btn" id="fw-w">Wrap</button>
+        <button class="btn" id="fw-w-rev">Wrap-Reverse</button>
+        <button class="btn" id="fw-nw">NoWrap</button>
+
+        <p>Align Content: </p> <!--  Use Flex-wrap: wrap -->
+        <button class="btn" id="a-c-start">Start</button>
+        <button class="btn" id="a-c-center">Center</button>
+        <button class="btn" id="a-c-end">End</button>
+    </div>
+    <script>
+        let cnt = document.querySelector('.container').style
+        
+        document.getElementById('flex').addEventListener('click',()=>{
+            cnt.display = 'flex';
+        })
+        document.getElementById('block').addEventListener('click',()=>{
+            cnt.display='block';
+        })
+        document.getElementById('inline-flex').addEventListener('click',()=>{
+            cnt.display='inline-flex';
+        })
+
+        document.getElementById('flex-col').addEventListener('click', () => {
+           (cnt.display!='block')? cnt.flexDirection = 'column':alert('Select display:flex first !!!');
+        })
+        document.getElementById('flex-col-rev').addEventListener('click', () => {
+            (cnt.display!='block')? cnt.flexDirection = 'column-reverse':alert('Select display:flex first !!!');
+        })
+        document.getElementById('flex-row').addEventListener('click', () => {
+            (cnt.display!='block')? cnt.flexDirection = 'row':alert('Select display:flex first !!!');
+        })
+        document.getElementById('flex-row-rev').addEventListener('click', () => {
+            (cnt.display!='block')? cnt.flexDirection = 'row-reverse':alert('Select display:flex first !!!');
+        })
+
+        document.getElementById('ai-start').addEventListener('click', () => {
+            (cnt.display != 'block') ? document.querySelector('.container').style.alignItems = "start" : alert('Select display:flex first !!!')
+        })
+        document.getElementById('ai-center').addEventListener('click', () => {
+            (cnt.display != 'block') ? document.querySelector('.container').style.alignItems = "center" : alert('Select display:flex first !!!')
+        })
+        document.getElementById('ai-end').addEventListener('click', () => {
+            (cnt.display != 'block') ? document.querySelector('.container').style.alignItems = "end" : alert('Select display:flex first !!!')
+        })
+     
+
+        document.getElementById('jc-start').addEventListener('click', () => {
+            (cnt.display != 'block') ? document.querySelector('.container').style.justifyContent = "start" : alert('Select display:flex first !!!')
+        })
+        document.getElementById('jc-center').addEventListener('click', () => {
+            (cnt.display != 'block') ? document.querySelector('.container').style.justifyContent = "center" : alert('Select display:flex first !!!')
+        })
+        document.getElementById('jc-end').addEventListener('click', () => {
+            (cnt.display != 'block') ? document.querySelector('.container').style.justifyContent = "end" : alert('Select display:flex first !!!')
+        })
+        document.getElementById('jc-sb').addEventListener('click', () => {
+            (cnt.display != 'block') ? document.querySelector('.container').style.justifyContent = "space-between" : alert('Select display:flex first !!!')
+        })
+        document.getElementById('jc-se').addEventListener('click', () => {
+            (cnt.display != 'block') ? document.querySelector('.container').style.justifyContent = "space-evenly" : alert('Select display:flex first !!!')
+        })
+        document.getElementById('jc-sa').addEventListener('click', () => {
+            (cnt.display != 'block') ? document.querySelector('.container').style.justifyContent = "space-around" : alert('Select display:flex first !!!')
+        })
+        
+        document.getElementById('fw-w').addEventListener('click', () => {
+            (cnt.display != 'block') ? document.querySelector('.container').style.flexWrap = "wrap" : alert('Select display:flex first !!!')
+        })
+        document.getElementById('fw-nw').addEventListener('click', () => {
+            (cnt.display != 'block') ? document.querySelector('.container').style.flexWrap = "nowrap" : alert('Select display:flex first !!!')
+        })
+        document.getElementById('fw-w-rev').addEventListener('click', () => {
+            (cnt.display != 'block') ? document.querySelector('.container').style.flexWrap = "wrap-reverse" : alert('Select display:flex first !!!')
+        })
+
+        document.getElementById('a-c-start').addEventListener('click', () => {
+            (cnt.display != 'block') ? document.querySelector('.container').style.alignContent = "start" : alert('Select display:flex first !!!')
+        })
+        document.getElementById('a-c-center').addEventListener('click', () => {
+            (cnt.display != 'block') ? document.querySelector('.container').style.alignContent = "center" : alert('Select display:flex first !!!')
+        })
+        document.getElementById('a-c-end').addEventListener('click', () => {
+            (cnt.display != 'block') ? document.querySelector('.container').style.alignContent = "end" : alert('Select display:flex first !!!')
+        })
+        
+    </script>
+</body>
+
+</html>
