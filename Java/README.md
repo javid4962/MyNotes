@@ -1227,3 +1227,121 @@ Sum = 30
 Sum = 60.0
 Sum = 15.5
 ```
+
+# Loop Control Constructs | Loops
+
+1. `For loop`
+2. `while loop`
+3. `do-while loop`
+4. `enhanced for loop | For-each loop`
+
+> Loops may have the following 3 things:
+> - Initialization - From Where to start
+> - Condition Check - until where to go and end
+> - Incrementation/Decrementation - go ahead or go behind
+
+### Program
+> Statement : Write a program to print Sachin and Tendulkar in a new line 5 times
+```java
+// Without using loops
+class Demo{
+  public static void main(String[] args){
+    System.out.println("Sachin");
+    System.out.println("Tendulkar");
+    System.out.println("Sachin");
+    System.out.println("Tendulkar");
+    System.out.println("Sachin");
+    System.out.println("Tendulkar");
+    System.out.println("Sachin");
+    System.out.println("Tendulkar");
+    System.out.println("Sachin");
+    System.out.println("Tendulkar");
+  }
+}
+```
+```output
+Sachin
+Tendulkar
+Sachin
+Tendulkar
+Sachin
+Tendulkar
+Sachin
+Tendulkar
+Sachin
+Tendulkar
+```
+```java
+// Using For loop
+class Demo{
+  public static void main(String[] args){
+    for(int i = 1; i <= 5; i++){
+      System.out.println("Sachin");
+      System.out.println("Tendulkar");
+    }
+  }
+}
+```
+```output
+Sachin
+Tendulkar
+Sachin
+Tendulkar
+Sachin
+Tendulkar
+Sachin
+Tendulkar
+Sachin
+Tendulkar
+```
+```java
+// Using while loop
+class Demo{
+  public static void main(String[] args){
+    int i = 1;
+    while(i <= 5){
+      System.out.println("Sachin");
+      System.out.println("Tendulkar");
+      i++;
+    }
+  }
+}
+```
+```output
+Sachin
+Tendulkar
+Sachin
+Tendulkar
+Sachin
+Tendulkar
+Sachin
+Tendulkar
+Sachin
+Tendulkar
+```
+```java
+// Using do-while loop
+class Demo{
+  public static void main(String[] args){
+    int i = 1;
+    do{
+      System.out.println("Sachin");
+      System.out.println("Tendulkar");
+      i++;
+    }while(i <= 5);
+  }
+}
+```
+```output
+Sachin
+Tendulkar
+Sachin
+Tendulkar
+Sachin
+Tendulkar
+Sachin
+Tendulkar
+Sachin
+Tendulkar
+```
+
