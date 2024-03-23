@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+</head>
+<style>
+    .container{
+        border: 2px solid black;
+        display: grid;
+        width: 100vw;
+        height: 80vh;
+        /* grid-template-columns: [first] 200px [second] 100px [third]; */
+        /* grid-template-rows: 1fr 1fr 1fr; */
+        grid-template-columns: repeat(3,minmax(40px, 1fr));
+        grid-template-rows: repeat(3,minmax(40px, 1fr));
+
+    }
+    .item{
+        /* width: 150px; */
+        /* height: 150px; */
+        /* grid-row: ; */
+        border: 2px solid red;
+    }
+    .item-3{
+        /* grid-column: first/third; */
+        /* grid-column: first/third;
+        border: 2px solid black; */
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item item-3">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms</title>
+</head>
+<style>
+    body {
+        color: black;
+    }
+
+    .container {
+        width: 80vw;
+        border: 1px solid red;
+        display: flex;
+        flex-wrap: wrap;justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .box {
+        width: 4rem;
+        height: 4rem;
+        border: 1px solid;
+        margin: 0.5rem;
+        transition-duration: 1s;
+        background: #ffff00a7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border-radius: 50%; */
+    }
+
+    .box1:hover {
+        scale: 1.2;
+    }
+
+    .box2:hover {
+        transform: translateX(10px);
+    }
+
+    .box3:hover {
+        transform: translateY(10px);
+    }
+
+    .box4:hover {
+        transform: translateX(-10px);
+    }
+
+    .box5:hover {
+        transform: translateY(-10px);
+    }
+
+    .box6:hover {
+        /* transform: rotate(45deg); */
+        transform: rotate(3turn);
+    }
+
+    .box7:hover {
+        transform: rotateX(45deg)
+    }
+
+    .box8:hover {
+        transform: rotateY(45deg)
+    }
+
+    .box9:hover {
+        transform: rotate3d(1, 2, 3, 360deg)
+    }
+
+    .box10:hover {
+        transform: skewX(10deg);
+    }
+
+    .box11:hover {
+        transform: skewY(10deg);
+    }
+
+    .box12:hover {
+        transform: skew(10deg, 10deg);
+    }
+
+    .box13:hover {
+        transform: matrix(1, 2, 3, 4, 5, 6);
+    }
+
+    .box14:hover {
+        scale: 0.5;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+        <div class="box box4">box4</div>
+        <div class="box box5">box5</div>
+        <div class="box box6">box6<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+            <path d="M18 9.00005C18 9 13 15 12 15C10 15 5 9 6 9" stroke="red" stroke-width="2" stroke-linecap="" stroke-linejoin="round" />
+        </svg></div>
+        <!-- <img src="https://cdn.hugeicons.com/icons/code-stroke-rounded.svg" alt="code" width="48" height="48" /> -->
+        <div class="box box7">box7</div>
+        <div class="box box8">box8</div>
+        <div class="box box9">box9</div>
+        <div class="box box10">box10</div>
+        <div class="box box11">box11</div>
+        <div class="box box12">box12</div>
+        <div class="box box13">box13</div>
+        <div class="box box14">box14</div>
+        <div class="box box14">box14</div>
+        <div class="box box13">box13</div>
+        <div class="box box12">box12</div>
+        <div class="box box11">box11</div>
+        <div class="box box10">box10</div>
+        <div class="box box9">box9</div>
+        <div class="box box8">box8</div>
+        <div class="box box7">box7</div>
+        <div class="box box6">box6</div>
+        <div class="box box5">box5</div>
+        <div class="box box4">box4</div>
+        <div class="box box3">box3</div>
+        <div class="box box2">box2</div>
+        <div class="box box1">box1</div>
+    </div>
+</body>
+
+</html>

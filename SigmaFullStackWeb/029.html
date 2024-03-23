@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Excercise-6</title>
+</head>
+<style>
+    * {
+        /* margin: 0;
+        padding: 0; */
+        box-sizing: border-box;
+    }
+    body{
+        background: #000;
+    }
+
+    .nav {
+        border: 1px solid;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #000;
+        color: white;
+        padding: 1rem;
+    }
+    .nav-title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+   
+    }
+    .logo-title-1{
+        font-size: 30px;
+        line-height: 2rem;
+        color: black;
+        padding: 0.8rem;
+        border-radius: 10px 5px 5px 10px;
+        background-image: url('profile_img.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        text-shadow: 1px 1px 1px white;
+        border: 3px solid white;
+        /* border-right: none; */
+    }
+    .logo-title-2{
+        font-size: 20px;
+        background-color: black;
+        padding: 0.5rem;
+        border-radius: 0 5px 5px 0;
+        border: 1px solid white;
+        border-right: 5px solid red;
+        color: white;
+        text-shadow: 1px 1px 1px red;
+    }
+    .list-items {
+        display: flex;
+        width: 50%;
+        justify-content: end;
+        align-items: center;
+    }
+    
+    li {
+        list-style: none;
+        padding: 0 1rem;
+    }
+    li>.fa-angle-down{
+        font-size: xx-small;
+    }
+    li>.fa-language{
+        font-size: 25px;
+    }
+</style>
+
+<body>
+    <!-- <h1>Creating a navbar using flexbox</h1> -->
+    <div class="nav">
+        <div class="nav-title">
+        <!-- <img class="logo" src="profile_img.jpg"/> -->
+        <span class="logo-title-1">Ultra </span>
+        <span class="logo-title-2">Edit</span>
+    </div>
+        <ul class="list-items">
+           <li class="item">Products <i class="fa fa-angle-down"></i></li>
+           <li class="item">Pricing <i class="fa fa-angle-down"></i></li>
+           <li class="item">Resources <i class="fa fa-angle-down"></i></li>
+           <li class="item">About us <i class="fa fa-angle-down"></i></li>
+           <li class="item"><i class="fa fa-language"></i></li>
+        </ul>
+    </div>
+</body>
+
+</html>
