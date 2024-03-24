@@ -4,93 +4,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Excercise-6</title>
 </head>
 <style>
     * {
-        /* margin: 0;
-        padding: 0; */
+        margin: 0;
+        padding: 0;
         box-sizing: border-box;
     }
-    body{
-        background: #000;
+
+    header {
+        margin: 1rem 5rem;
+        /* background: #000;
+        color: white; */
     }
 
-    .nav {
-        border: 1px solid;
+    nav {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
-        background: #000;
-        color: white;
+
+    }
+
+    nav .logo img {
+        width: 180px;
+    }
+
+    .right ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-family: "Segoe UI";
+    }
+
+    ul li {
+        list-style: none;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #222222;
+    }
+
+    ul .icon svg {
+        font-size: 2rem;
+        /* width: 25px; */
+    }
+
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lang-box {
+        margin: 2rem;
+        display: grid;
+        gap: 2rem 0rem;
+        grid-template-columns: 350px 350px 350px;
+    }
+
+    .lang {
+        height: 180px;
+        width: 320px;
+        font-family: 'Segoe UI';
+        background-color: #f9f9f9;
+        /* box-shadow: 0px 0px 2px 4px #ffffffd5; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
         padding: 1rem;
     }
-    .nav-title{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-   
-    }
-    .logo-title-1{
-        font-size: 30px;
-        line-height: 2rem;
-        color: black;
-        padding: 0.8rem;
-        border-radius: 10px 5px 5px 10px;
-        background-image: url('profile_img.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: top;
-        text-shadow: 1px 1px 1px white;
-        border: 3px solid white;
-        /* border-right: none; */
-    }
-    .logo-title-2{
+
+    .lang h2 {
         font-size: 20px;
-        background-color: black;
-        padding: 0.5rem;
-        border-radius: 0 5px 5px 0;
-        border: 1px solid white;
-        border-right: 5px solid red;
+    }
+
+    .lang p {
+        font-size: 12px;
+    }
+
+    .btns button {
+        padding: 0.6rem 0.7rem;
+        color: rgb(255, 255, 255);
+        font-family: 'Segoe UI';
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        margin: 1rem 0rem;
+        cursor: pointer;
+        /* text-shadow: 1px 1px 0px black; */
+    }
+
+    a {
         color: white;
-        text-shadow: 1px 1px 1px red;
+        text-decoration: none;
     }
-    .list-items {
-        display: flex;
-        width: 50%;
-        justify-content: end;
-        align-items: center;
+
+
+    .btns button:nth-child(odd) {
+        background-color: #4eb2c2e8;
     }
-    
-    li {
-        list-style: none;
-        padding: 0 1rem;
+
+    .btns button:nth-child(even) {
+        background-color: #5cc35a;
     }
-    li>.fa-angle-down{
-        font-size: xx-small;
+
+    .btns button:nth-child(odd):hover {
+        background-color: #49a6b5;
     }
-    li>.fa-language{
-        font-size: 25px;
+
+    .btns button:nth-child(even):hover {
+        background-color: #4fa84e;
     }
 </style>
 
 <body>
-    <!-- <h1>Creating a navbar using flexbox</h1> -->
-    <div class="nav">
-        <div class="nav-title">
-        <!-- <img class="logo" src="profile_img.jpg"/> -->
-        <span class="logo-title-1">Ultra </span>
-        <span class="logo-title-2">Edit</span>
-    </div>
-        <ul class="list-items">
-           <li class="item">Products <i class="fa fa-angle-down"></i></li>
-           <li class="item">Pricing <i class="fa fa-angle-down"></i></li>
-           <li class="item">Resources <i class="fa fa-angle-down"></i></li>
-           <li class="item">About us <i class="fa fa-angle-down"></i></li>
-           <li class="item"><i class="fa fa-language"></i></li>
-        </ul>
-    </div>
+    <header>
+        <nav>
+            <div class="logo"><img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" alt="">
+            </div>
+            <div class="right">
+                <ul>
+                    <li>Products<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15"
+                            color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li>Pricing<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15"
+                            color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li>Resources<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15"
+                            color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li>About us<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15"
+                            color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li>Security and compliances<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15"
+                            height="15" color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25" height="25"
+                            color="#000000" fill="none">
+                            <path
+                                d="M5 5.96552H8.15M12 5.96552H10.25M8.15 5.96552H10.25M8.15 5.96552V5M10.25 5.96552C9.88076 7.28593 9.10754 8.53411 8.225 9.63103M5.975 12C6.68843 11.344 7.4942 10.5394 8.225 9.63103M8.225 9.63103C7.775 9.10345 7.145 8.24984 6.965 7.86364M8.225 9.63103L9.575 11.0345"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M7.02231 16.9777C7.07674 18.6978 7.26397 19.7529 7.90796 20.5376C8.07418 20.7401 8.25989 20.9258 8.46243 21.092C9.56878 22 11.2125 22 14.5 22C17.7875 22 19.4312 22 20.5376 21.092C20.7401 20.9258 20.9258 20.7401 21.092 20.5376C22 19.4312 22 17.7875 22 14.5C22 11.2125 22 9.56878 21.092 8.46243C20.9258 8.25989 20.7401 8.07418 20.5376 7.90796C19.7563 7.26676 18.707 7.07837 17 7.02303M7.02231 16.9777C5.30217 16.9233 4.24713 16.736 3.46243 16.092C3.25989 15.9258 3.07418 15.7401 2.90796 15.5376C2 14.4312 2 12.7875 2 9.5C2 6.21252 2 4.56878 2.90796 3.46243C3.07418 3.25989 3.25989 3.07418 3.46243 2.90796C4.56878 2 6.21252 2 9.5 2C12.7875 2 14.4312 2 15.5376 2.90796C15.7401 3.07418 15.9258 3.25989 16.092 3.46243C16.736 4.24713 16.9233 5.30217 16.9777 7.02231C16.9777 7.02231 16.9777 7.02231 17 7.02303M7.02231 16.9777L17 7.02303"
+                                stroke="currentColor" stroke-width="1.5" />
+                            <path
+                                d="M13 19L13.8333 17M18 19L17.1667 17M13.8333 17L15.5 13L17.1667 17M13.8333 17H17.1667"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></div>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="lang-box">
+            <div class="lang">
+                <h2>English</h2>
+                <p></p>
+                <div class="btns">
+                    <button class="dow-32" download="true"><a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_english.exe?_gl=1*1rxqp5i*_ga*MTQwMjU4MzgyNC4xNzExMTY5MjY2*_ga_QNXHVTPWNS*MTcxMTI1OTQ1Ni4yLjEuMTcxMTI1OTUwOS43LjAuMA..">Download
+                            32-bit</a></button>
+                    <button class="dow-64"><a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*1vc8emx*_ga*MTQwMjU4MzgyNC4xNzExMTY5MjY2*_ga_QNXHVTPWNS*MTcxMTI1OTQ1Ni4yLjEuMTcxMTI1OTUwOS43LjAuMA..">Download
+                            64-bit</a></button>
+                </div>
+            </div>
+            <div class="lang">
+                <h2>Deutsch</h2>
+                <p>German</p>
+                <div class="btns">
+                    <button class="dow-32"><a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_german.exe?_gl=1*1vc8emx*_ga*MTQwMjU4MzgyNC4xNzExMTY5MjY2*_ga_QNXHVTPWNS*MTcxMTI1OTQ1Ni4yLjEuMTcxMTI1OTUwOS43LjAuMA..">Download
+                            32-bit</a></button>
+                    <button class="dow-64"><a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_german_64.exe?_gl=1*1vc8emx*_ga*MTQwMjU4MzgyNC4xNzExMTY5MjY2*_ga_QNXHVTPWNS*MTcxMTI1OTQ1Ni4yLjEuMTcxMTI1OTUwOS43LjAuMA..">Download
+                            64-bit</a></button>
+                </div>
+            </div>
+            <div class="lang">
+                <h2>Italiano</h2>
+                <p>Italian</p>
+                <div class="btns">
+                    <button class="dow-32"><a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_italian.exe?_gl=1*1vc8emx*_ga*MTQwMjU4MzgyNC4xNzExMTY5MjY2*_ga_QNXHVTPWNS*MTcxMTI1OTQ1Ni4yLjEuMTcxMTI1OTUwOS43LjAuMA..">Download
+                            32-bit</a></button>
+                    <button class="dow-64"><a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_italian_64.exe?_gl=1*15rm8cj*_ga*MTQwMjU4MzgyNC4xNzExMTY5MjY2*_ga_QNXHVTPWNS*MTcxMTI1OTQ1Ni4yLjEuMTcxMTI1OTUwOS43LjAuMA..">Download
+                            64-bit</a></button>
+                </div>
+            </div>
+            <div class="lang">
+                <h2>Español</h2>
+                <p>Spanish</p>
+                <div class="btns">
+                    <button class="dow-32"><a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_spanish.exe?_gl=1*15rm8cj*_ga*MTQwMjU4MzgyNC4xNzExMTY5MjY2*_ga_QNXHVTPWNS*MTcxMTI1OTQ1Ni4yLjEuMTcxMTI1OTUwOS43LjAuMA..">Download
+                            32-bit</a></button>
+                    <button class="dow-64"><a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_spanish_64.exe?_gl=1*15rm8cj*_ga*MTQwMjU4MzgyNC4xNzExMTY5MjY2*_ga_QNXHVTPWNS*MTcxMTI1OTQ1Ni4yLjEuMTcxMTI1OTUwOS43LjAuMA..">Download
+                            64-bit</a></button>
+                </div>
+            </div>
+            <div class="lang">
+                <h2>français</h2>
+                <p>French</p>
+                <div class="btns">
+                    <button class="dow-32"><a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_french.exe?_gl=1*15rm8cj*_ga*MTQwMjU4MzgyNC4xNzExMTY5MjY2*_ga_QNXHVTPWNS*MTcxMTI1OTQ1Ni4yLjEuMTcxMTI1OTUwOS43LjAuMA..">Download
+                            32-bit</a></button>
+                    <button class="dow-64"><a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_french_64.exe?_gl=1*15rm8cj*_ga*MTQwMjU4MzgyNC4xNzExMTY5MjY2*_ga_QNXHVTPWNS*MTcxMTI1OTQ1Ni4yLjEuMTcxMTI1OTUwOS43LjAuMA..">Download
+                            64-bit</a></button>
+                </div>
+            </div>
+            <div class="lang">
+                <h2>Português brasileiro</h2>
+                <p>Brazilian Portuguese</p>
+                <div class="btns">
+                    <button class="dow-32"><a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_portuguese.exe?_gl=1*15rm8cj*_ga*MTQwMjU4MzgyNC4xNzExMTY5MjY2*_ga_QNXHVTPWNS*MTcxMTI1OTQ1Ni4yLjEuMTcxMTI1OTUwOS43LjAuMA..">Download
+                            32-bit</a></button>
+                    <button class="dow-64"><a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_portuguese_64.exe?_gl=1*15rm8cj*_ga*MTQwMjU4MzgyNC4xNzExMTY5MjY2*_ga_QNXHVTPWNS*MTcxMTI1OTQ1Ni4yLjEuMTcxMTI1OTUwOS43LjAuMA..">Download
+                            64-bit</a></button>
+                </div>
+            </div>
+            <div class="lang">
+                <h2>日本</h2>
+                <p>Japanese</p>
+                <div class="btns">
+                    <button class="dow-32"><a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_japanese.exe?_gl=1*15rm8cj*_ga*MTQwMjU4MzgyNC4xNzExMTY5MjY2*_ga_QNXHVTPWNS*MTcxMTI1OTQ1Ni4yLjEuMTcxMTI1OTUwOS43LjAuMA..">Download
+                            32-bit</a></button>
+                    <button class="dow-64"><a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_japanese_64.exe?_gl=1*12r9pj*_ga*MTQwMjU4MzgyNC4xNzExMTY5MjY2*_ga_QNXHVTPWNS*MTcxMTI1OTQ1Ni4yLjEuMTcxMTI1OTUwOS43LjAuMA..">Download
+                            64-bit</a></button>
+                </div>
+            </div>
+            <div class="lang">
+                <h2>한국어</h2>
+                <p>Korean</p>
+                <div class="btns">
+                    <button class="dow-32"><a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_korean.exe?_gl=1*12r9pj*_ga*MTQwMjU4MzgyNC4xNzExMTY5MjY2*_ga_QNXHVTPWNS*MTcxMTI1OTQ1Ni4yLjEuMTcxMTI1OTUwOS43LjAuMA..">Download
+                            32-bit</a></button>
+                    <button class="dow-64"><a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_korean_64.exe?_gl=1*12r9pj*_ga*MTQwMjU4MzgyNC4xNzExMTY5MjY2*_ga_QNXHVTPWNS*MTcxMTI1OTQ1Ni4yLjEuMTcxMTI1OTUwOS43LjAuMA..">Download
+                            64-bit</a></button>
+                </div>
+            </div>
+            <div class="lang">
+                <h2>中国</h2>
+                <p>Chinese</p>
+                <div class="btns">
+                    <button class="dow-32"><a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_chinese.exe?_gl=1*12r9pj*_ga*MTQwMjU4MzgyNC4xNzExMTY5MjY2*_ga_QNXHVTPWNS*MTcxMTI1OTQ1Ni4yLjEuMTcxMTI1OTUwOS43LjAuMA..">Download
+                            32-bit</a></button>
+                    <button class="dow-64"><a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_chinese_64.exe?_gl=1*12r9pj*_ga*MTQwMjU4MzgyNC4xNzExMTY5MjY2*_ga_QNXHVTPWNS*MTcxMTI1OTQ1Ni4yLjEuMTcxMTI1OTUwOS43LjAuMA..">Download
+                            64-bit</a></button>
+                </div>
+            </div>
+            <div class="lang">
+                <h2>中國</h2>
+                <p>Traditional Chinese</p>
+                <div class="btns">
+                    <button class="dow-32"><a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_chinese_traditional.exe?_gl=1*12r9pj*_ga*MTQwMjU4MzgyNC4xNzExMTY5MjY2*_ga_QNXHVTPWNS*MTcxMTI1OTQ1Ni4yLjEuMTcxMTI1OTUwOS43LjAuMA..">Download
+                            32-bit</a></button>
+                    <button class="dow-64"><a
+                            href="https://downloads.ultraedit.com/main/ue/win/ue_chinese_traditional_64.exe?_gl=1*12r9pj*_ga*MTQwMjU4MzgyNC4xNzExMTY5MjY2*_ga_QNXHVTPWNS*MTcxMTI1OTQ1Ni4yLjEuMTcxMTI1OTUwOS43LjAuMA..">Download
+                            64-bit</a></button>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
